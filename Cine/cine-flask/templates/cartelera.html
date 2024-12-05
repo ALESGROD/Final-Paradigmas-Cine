@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Cartelera de Películas{% endblock %}
+
+{% block content %}
+<!-- Aquí se enlaza el archivo CSS específico para esta página -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cartelera.css') }}">
+
+<section id="cartelera">
+    <h2 class="titulo">Películas Disponibles</h2>
+
+    <div class="row">
+        <div class="pelicula">
+            <img src="{{ url_for('static', filename='images/avengers_endgame.jpg') }}" alt="Avengers: Endgame">
+            <div class="contenido">
+                <h3>Avengers: Endgame</h3>
+                <p><strong>Sinopsis:</strong> Los Vengadores deben reunirse para deshacer los efectos del chasquido de Thanos y restaurar el orden en el universo.</p>
+                <p><strong>Calificación:</strong> A</p>
+                <p><strong>Género:</strong> Acción, Ciencia ficción</p>
+                <p><strong>Duración:</strong> 181 minutos</p>
+                <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c" target="_blank" class="btn-trailer">Ver Tráiler</a>
+            </div>
+        </div>
+
+        <div class="pelicula">
+            <img src="{{ url_for('static', filename='images/el_rey_leon.jpg') }}" alt="El Rey León">
+            <div class="contenido">
+                <h3>El Rey León</h3>
+                <p><strong>Sinopsis:</strong> Simba, el joven león, lucha por aceptar su destino como el futuro rey de la Sabana Africana.</p>
+                <p><strong>Calificación:</strong> A</p>
+                <p><strong>Género:</strong> Animación, Aventura</p>
+                <p><strong>Duración:</strong> 118 minutos</p>
+                <a href="https://www.youtube.com/watch?v=7TavVZMewpY" target="_blank" class="btn-trailer">Ver Tráiler</a>
+            </div>
+        </div>
+
+        <div class="pelicula">
+            <img src="{{ url_for('static', filename='images/jurassic_world.jpg') }}" alt="Jurassic World">
+            <div class="contenido">
+                <h3>Jurassic World</h3>
+                <p><strong>Sinopsis:</strong> En un parque temático de dinosaurios, los visitantes deben escapar cuando una especie genética modificada escapa de su recinto.</p>
+                <p><strong>Calificación:</strong> A</p>
+                <p><strong>Género:</strong> Acción, Aventura, Ciencia ficción</p>
+                <p><strong>Duración:</strong> 124 minutos</p>
+                <a href="https://www.youtube.com/watch?v=RFinNxS5KN4" target="_blank" class="btn-trailer">Ver Tráiler</a>
+            </div>
+        </div>
+
+        <div class="pelicula">
+            <img src="{{ url_for('static', filename='images/titanic.jpg') }}" alt="Titanic">
+            <div class="contenido">
+                <h3>Titanic</h3>
+                <p><strong>Sinopsis:</strong> Una joven de clase alta se enamora de un joven de clase baja en el transatlántico RMS Titanic, el cual se hunde trágicamente.</p>
+                <p><strong>Calificación:</strong> A</p>
+                <p><strong>Género:</strong> Drama, Romance</p>
+                <p><strong>Duración:</strong> 195 minutos</p>
+                <a href="https://www.youtube.com/watch?v=2e-eXJ6HgkQ" target="_blank" class="btn-trailer">Ver Tráiler</a>
+            </div>
+        </div>
+
+        <div class="pelicula">
+            <img src="{{ url_for('static', filename='images/spiderman_no_way_home.jpg') }}" alt="Spider-Man: No Way Home">
+            <div class="contenido">
+                <h3>Spider-Man: No Way Home</h3>
+                <p><strong>Sinopsis:</strong> Spider-Man enfrenta consecuencias globales cuando su identidad secreta es revelada, y busca ayuda para restaurar el orden en su vida.</p>
+                <p><strong>Calificación:</strong> A</p>
+                <p><strong>Género:</strong> Acción, Aventura, Ciencia ficción</p>
+                <p><strong>Duración:</strong> 148 minutos</p>
+                <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" target="_blank" class="btn-trailer">Ver Tráiler</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="/" class="btn btn-primary">Regresar a la pantalla principal</a>
+    </div>
+</section>
+{% endblock %}

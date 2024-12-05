@@ -1,0 +1,89 @@
+/* Contenedor principal con fondo */
+.precios-section {
+    background: url('/static/images/precios.jpg') no-repeat center center/cover;
+    position: relative;
+    min-height: 100vh;  /* Se ajusta según el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;  /* Espaciado para dispositivos pequeños */
+}
+
+
+/* Capa blanca translúcida para el contenido */
+.overlay {
+    background: rgba(255, 255, 255, 0.9);  /* Blanco con transparencia */
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Título de la sección */
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50; /* Mismo color del fondo */
+    margin-bottom: 30px;
+}
+
+/* Tarjetas de precios y promociones */
+.card {
+    background: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Botón principal */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
+.flash {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.flash.error {
+    background-color: red;
+}
+
+.flash.success {
+    background-color: green;
+}

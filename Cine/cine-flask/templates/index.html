@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Cine{% endblock %}
+
+{% block content %}
+    <div class="hero-section">
+        <div class="content">
+            <h1 class="title">Bienvenido al Cine</h1>
+            <p class="subtitle">Descubre las mejores películas y promociones exclusivas.</p>
+            <a href="/cartelera" class="btn btn-primary">Ver Cartelera</a>
+        </div>
+    </div>
+
+    <!-- Botones de Registro e Iniciar sesión -->
+    <div class="text-center mt-5">
+        <h2>Accede a tu cuenta</h2>
+        <div class="d-flex justify-content-center mt-3">
+            <!-- Botón para registrarse -->
+            <a href="{{ url_for('registro') }}" class="btn btn-success mx-2">Registrarse</a>
+            <!-- Botón para iniciar sesión -->
+            <a href="{{ url_for('login') }}" class="btn btn-primary mx-2">Iniciar Sesión</a>
+        </div>
+    </div>
+{% endblock %}

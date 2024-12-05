@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Compra de Boletos{% endblock %}
+
+{% block content %}
+<!-- Aquí se enlaza el archivo CSS específico para esta página -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/compra.css') }}">
+
+<section id="compra">
+    <h2>Compra de Boletos</h2>
+
+    <!-- Formulario para compra -->
+    <form action="{{ url_for('compra') }}" method="POST" id="form-compra">
+        <div class="form-group">
+            <label for="pelicula">Selecciona una película:</label>
+            <select id="pelicula" name="pelicula" class="form-control" required>
+                <option value="Avengers: Endgame">Avengers: Endgame</option>
+                <option value="El Rey León">El Rey León</option>
+                <option value="Jurassic World">Jurassic World</option>
+                <option value="Titanic">Titanic</option>
+                <option value="Spider-Man: No Way Home">Spider-Man: No Way Home</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cantidad">Cantidad de boletos:</label>
+            <input type="number" id="cantidad" name="cantidad" class="form-control" required min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="nombre_banco">Nombre del Banco:</label>
+            <input type="text" id="nombre_banco" name="nombre_banco" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numero_cuenta">Número de Cuenta:</label>
+            <input type="text" id="numero_cuenta" name="numero_cuenta" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Comprar</button>
+    </form>
+
+    <!-- Aquí va el mensaje flotante -->
+    <div id="mensaje-compra" class="mensaje-compra" style="display:none;">
+        <p>Compra exitosa. ¡Gracias por tu compra!</p>
+    </div>
+</section>
+
+<!-- Scripts de JavaScript -->
+<script>
+    document.getElementById("form-compra").addEventListener("submit", function(event) {
+        event.preventDefault();  // Evita la recarga de la página
+
+        // Mostrar el mensaje de compra exitosa
+        var mensaje = document.getElementById("mensaje-compra");
+        mensaje.style.display = "block";
+
+        // Opcionalmente, ocultar el mensaje después de unos segundos
+        setTimeout(function() {
+            mensaje.style.display = "none";
+        }, 3000);  // El mensaje se ocultará después de 3 segundos
+
+        // Aquí puedes agregar más lógica para enviar el formulario (por ejemplo, con AJAX)
+        this.submit();  // Envía el formulario después de mostrar el mensaje
+    });
+</script>
+
+{% endblock %}

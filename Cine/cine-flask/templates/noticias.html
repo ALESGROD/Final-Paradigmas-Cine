@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Noticias y Estrenos - Cine Profesional{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Noticias y Próximos Estrenos</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <h5 class="card-title">Próximamente</h5>
+                    <ul>
+                        <li><strong>"Estreno 1"</strong> - 20 de diciembre de 2024</li>
+                        <li><strong>"Estreno 2"</strong> - 5 de enero de 2025</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <h5 class="card-title">Eventos Especiales</h5>
+                    <ul>
+                        <li><strong>Noche de Estreno VIP</strong>: 15 de diciembre de 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

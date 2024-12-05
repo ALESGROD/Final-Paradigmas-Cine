@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Precios y Promociones - Cine Profesional{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/precios.css') }}"> <!-- Conexión local al CSS -->
+
+<div class="precios-section">
+    <div class="overlay">
+        <h2 class="text-center mb-5 section-title">Precios y Promociones</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card general-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Tarifas Generales</h4>
+                        <ul class="list-unstyled">
+                            <li>🎟️ Entrada General: <strong>$100</strong></li>
+                            <li>👶 Niños y Tercera Edad: <strong>$80</strong></li>
+                            <li>⭐ VIP: <strong>$150</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card promo-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Promociones Especiales</h4>
+                        <ul class="list-unstyled">
+                            <li>🎉 2x1 en miércoles</li>
+                            <li>💳 20% de descuento con tarjeta de fidelidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ url_for('compra') }}" class="btn btn-primary btn-lg">Comprar Boletos</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
